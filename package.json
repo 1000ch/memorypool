@@ -1,0 +1,24 @@
+{
+  "name": "memorypool",
+  "version": "1.0.0",
+  "description": "JavaScript Memory Pool implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js | faucet"
+  },
+  "repository": "1000ch/memorypool",
+  "keywords": [
+    "memory",
+    "pool"
+  ],
+  "author": "1000ch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1000ch/memorypool/issues"
+  },
+  "homepage": "https://github.com/1000ch/memorypool#readme",
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "tape": "^4.6.0"
+  }
+}
