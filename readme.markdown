@@ -18,14 +18,19 @@ $ npm install memorypool
 ```javascript
 const MemoryPool = require('memorypool');
 const arrayPool = new MemoryPool(Array);
+const stringPool = new MemoryPool(String);
 
-let numbers = arrayPool.allocate();
-let strings = arrayPool.allocate();
-arrayPool.free(numbers);
-arrayPool.free(strings);
+let array1 = arrayPool.allocate();
+let array2 = arrayPool.allocate();
+arrayPool.free(array1);
+arrayPool.free(array2);
+let string1 = stringPool.allocate();
+stringPool.free(string1);
 
-// reuse Array instance from object pool
-let bools = arrayPool.allocate();
+// reuse Array instance from array pool
+let array3 = arrayPool.allocate();
+// reuse String instance from string pool
+let string2 = stringPool.allocate();
 ```
 
 ## License
