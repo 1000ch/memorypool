@@ -33,6 +33,40 @@ let array3 = arrayPool.allocate();
 let string2 = stringPool.allocate();
 ```
 
+## API
+
+### `new MemoryPool(type)`
+
+Constructor to create new instance of object pool.
+
+```javascript
+let pool = new MemoryPool(String);
+```
+
+### `MemoryPool#allocate()`
+
+Returns an instance of `type` passed on constructor.
+
+```javascript
+let instance = pool.allocate();
+```
+
+### `MemoryPool#free(object: type)`
+
+Returns an object to object pool.
+
+```javascript
+pool.free(instance);
+```
+
+### `MemoryPool#collect()`
+
+Clear references to collect memory by GC.
+
+```javascript
+pool.collect();
+```
+
 ## License
 
 MIT: http://1000ch.mit-license.org
